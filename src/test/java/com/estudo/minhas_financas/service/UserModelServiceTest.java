@@ -7,7 +7,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import static org.junit.jupiter.api.Assertions.*;
 
 @Slf4j
-class UserServiceTest {
+class UserModelServiceTest {
 
     @Test
     public void test() {

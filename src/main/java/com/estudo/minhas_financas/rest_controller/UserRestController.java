@@ -1,6 +1,6 @@
 package com.estudo.minhas_financas.rest_controller;
 
-import com.estudo.minhas_financas.model.User;
+import com.estudo.minhas_financas.model.UserModel;
 import com.estudo.minhas_financas.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +18,7 @@ public class UserRestController {
 
 
     @GetMapping("/list.json")
-    public List<User> index() {
+    public List<UserModel> index() {
         return userService.index();
     }
 }
