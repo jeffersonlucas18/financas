@@ -39,6 +39,8 @@ public class UserModel implements UserDetails, Serializable {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 
+
+
     @Override
     @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -48,6 +50,16 @@ public class UserModel implements UserDetails, Serializable {
     @Override
     public boolean isAccountNonExpired() {
         return true;
+    }
+
+    @Override
+    public String getUsername() {
+        return username;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
     }
 
     @Override
